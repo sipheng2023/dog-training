@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paws & Care - Pet Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Add link data-lightbox -->
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+         <style>
+    .gallery-img {
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar with Language Switcher -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logo" class="w-8 h-8">
+                <span class="font-bold text-xl">Paws & Care</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Home</a>
+               
+                <div class="flex items-center space-x-2">
+                    <button id="lang-en" class="px-2 py-1 rounded hover:bg-blue-100 focus:outline-none font-medium">EN</button>
+                    <span>|</span>
+                    <button id="lang-la" class="px-2 py-1 rounded hover:bg-blue-100 focus:outline-none font-medium">LA</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const translations = {
+            en: {
+                services: "Services",
+                contact: "Contact",
+                welcome: "Welcome to Paws & Care Gallery",
+                subtitle: "Your trusted partner in grooming, boarding, and loving your pets.",
+                explore: "Explore Services"
+              
+         
+            },
+            la: {
+                services: "ບໍລິການ",
+                contact: "ຕິດຕໍ່",
+                welcome: "ຍິນດີຕ້ອນຮັບ Paws & Care  Gallery",
+                subtitle: " ພັນທະມິດທີ່ທ່ານໄວ້ວາງໃຈໃນການດູແລ ຕັດຂົນ ແລະ ຮັກສັດລ໊ຽງຂອງທ່ານ",
+                explore: "ເບິ່ງບໍລິການ"
+              
+            }
+        };
+
+        function setLanguage(lang) {
+        
+            document.querySelector('h1').textContent = translations[lang].welcome;
+            document.querySelector('section.bg-blue-100 p').textContent = translations[lang].subtitle;
+            document.querySelector('section.bg-blue-100 a').textContent = translations[lang].explore;
+ 
+   
+        }
+
+
+        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+        document.getElementById('lang-la').addEventListener('click', () => setLanguage('la'));
+    </script>
+
+  <!-- Hero Section -->
+  <section class="bg-blue-100 py-16 px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4">Welcome to Paws & Care</h1>
+    <p class="text-lg mb-6">Your trusted partner in grooming, boarding, and loving your pets.</p>
+    <a href="index.html" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
+  </section>
+
+<!-- Gallery Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+ <h2 class="text-center mb-4">🐾 Our Dog Gallery</h2>
+      <div class="row g-4">
+        <!-- Repeat these blocks for each image -->
+        <div class="col-6 col-md-4 col-lg-3">
+            <a href="img/dog1.jpg" data-lightbox="dog-gallery" data-title="Dog 1">
+                <img src="img/dog1.jpg" class="img-fluid gallery-img" alt="Dog 1" />
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <a href="img/dog2.jpg" data-lightbox="dog-gallery" data-title="Dog 2">
+                <img src="img/dog2.jpg" class="img-fluid gallery-img" alt="Dog 2" />
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <a href="img/dog3.jpg" data-lightbox="dog-gallery" data-title="Dog 3">
+                <img src="img/dog3.jpg" class="img-fluid gallery-img" alt="Dog 3" />
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+         <a href="img/dog4.jpg" data-lightbox="dog-gallery" data-title="Dog 4">
+                <img src="img/dog4.jpg" class="img-fluid gallery-img" alt="Dog 4" />
+            </a>
+        </div>
+           <div class="col-6 col-md-4 col-lg-3">
+         <a href="img/dog5.jpg" data-lightbox="dog-gallery" data-title="Dog 5">
+                <img src="img/dog5.jpg" class="img-fluid gallery-img" alt="Dog 5" />
+            </a>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+         <a href="img/dog6.jpg" data-lightbox="dog-gallery" data-title="Dog 6">
+                <img src="img/dog6.jpg" class="img-fluid gallery-img" alt="Dog 6" />
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+         <a href="img/dog7.jpg" data-lightbox="dog-gallery" data-title="Dog 7">
+                <img src="img/dog7.jpg" class="img-fluid gallery-img" alt="Dog 7" />
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+         <a href="img/dog8.jpg" data-lightbox="dog-gallery" data-title="Dog 8">
+                <img src="img/dog8.jpg" class="img-fluid gallery-img" alt="Dog 8" />
+            </a>
+        </div>
+        <!-- Add more image blocks as needed -->
+                   </div>
+    </div>
+  </section>
+
+
+        
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-6">
+    <p>&copy; 2025 Paws & Care. All rights reserved.</p>
+  </footer>
+<script src="dist/js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
