@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paws & Care - Pet Services</title>
+  <title>Dog Training</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800">
@@ -90,9 +90,9 @@
 
 
 
-                testimonials: "Inthaninh Dog Training Security",
-                testimonialText: "\"Paws & Care took amazing care of our pup while we were on vacation. The staff is loving and professional!\"",
-                testimonialAuthor: "– Sarah M.",
+                testimonials: "Thank you for your trust in our service.",
+                testimonialText: "",
+                testimonialAuthor: "",
                 getInTouch: "Get in Touch",
                 name: "Your Name",
                 email: "Your Email",
@@ -125,8 +125,8 @@
                   showerlist1: "ລາຄາ 100,000 ກີບ ຕໍ່ 1 ຊົ່ວໂມງ",
                   // showerDesc2: "ຈະໃຊ້ອາບດ້ວຍສະບູໝາ",
 
-                  swimming: "ລອຍນ້ຳໝາ",
-                  swimminglist:" ລອຍນ້ຳໝາ ແລະ ຊັ້ນດ້ານໃນ",
+                  swimming: "ໝາລອຍນ້ຳ",
+                  swimminglist:" ພາໝາລອຍນ້ຳ",
                    swimminglist1:"ລາຄາ 100,000 ກີບ ຕໍ່ 1 ຊົ່ວໂມງ",
 
                   takecare : "ຮັບຝາກໝາ",
@@ -143,9 +143,9 @@
 
 
 
-                testimonials: "ຄໍາເຫັນຂອງລູກຄ້າ",
-                testimonialText: "\"Paws & Care ดูแลน้องหมาของเราอย่างดีมากในช่วงที่เราไปเที่ยว พนักงานน่ารักและเป็นมืออาชีพ!\"",
-                testimonialAuthor: "– Sarah M.",
+                testimonials: "Thank you for your trust in our service. ",
+                testimonialText: "",
+                testimonialAuthor: "",
                 getInTouch: "ຕິດຕໍ່ພວກເຮົາ",
                 name: "ชื่อของคุณ",
                 email: "อีเมลของคุณ",
@@ -155,6 +155,9 @@
         };
 
         function setLanguage(lang) {
+
+           const font = lang === 'la' ? "'Phetsarath OT', 'Times New Roman', Arial, 'Noto Sans', sans-serif" : "'Times New Roman', Arial, 'Noto Sans', sans-serif";
+
             document.querySelector('nav a[href="#services"]').textContent = translations[lang].services;
             document.querySelector('nav a[href="#contact"]').textContent = translations[lang].contact;
             document.querySelector('h1').textContent = translations[lang].welcome;
@@ -179,7 +182,7 @@
 
             // Swimming Modal
             document.querySelector('#swimmingModal ul li').textContent = translations[lang].swimminglist || "- We take the groomed dog.";
-            document.querySelector('#swimmingModal ul ol').textContent = translations[lang].swimminglist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+            document.querySelector('#swimmingModal ul ol').textContent = translations[lang].swimminglist1 || "100,000 Kip per 1 hour";
 
             // take care 
 
@@ -203,9 +206,10 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
 ? "ຄ່າບໍລະການແມ່ນ ...... "
 : "100,000 Kip for puppies and 200,000 Kip for adult dogs";
          
-// location
+// Contract and Location
 
-document.querySelector('section#location h2').textContent = lang === 'la' ? "ສະຖານທີ່ຕັ້ງຂອງພວກເຮົາ" : "Our Location";
+
+document.querySelector('section#location h2').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່ ແລະ ທີ່ຕັ້ງ" : "Contract and Location";
 document.querySelector('section#location h3').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່" : "Contact Details";
 document.querySelector('section#location .location-details p strong').textContent = lang === 'la' ? "ທີ່ຢູ່: " : "Address:";
 document.querySelector('section#location .location-details span').textContent = lang === 'la' ? "ບ້ານ ໜອງໜ້ຽວ ຮ່ອມ 07,ເມືອງ ສີໂຄດຕະບອງ,ນະຄອນຫຼວງວຽງຈັນ" : "Ban Nongniew Hom 07 ,Sikhottabong district , Vientiane Capital, Laos";
@@ -253,9 +257,24 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
 
   <!-- Hero Section -->
   <section class="bg-blue-100 py-16 px-6 text-center">
-    <h1 class="text-4xl font-bold mb-4">Inthaninh Dog Training Security</h1>
+    <style>
+      .hero-box {
+        background-color: #FFBF00;
+        border-radius: 1rem;
+        padding: 2rem 1rem;
+        margin: 0 auto 2rem auto;
+        max-width: 900px;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+        display: inline-block;
+      }
+    </style>
+    <div class="hero-box">
+      <span class="text-xl font-semibold text-gray-900"></span>
+        <h1 class="text-4xl font-bold mb-4">Inthaninh Dog Training Security</h1>
     <p class="text-lg mb-6">The center you can trust with dog experts with over 17 years of experience</p>
     <a href="#services" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
+    </div>
+  
   </section>
 
   <!-- Services Section -->
@@ -267,7 +286,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
       <!-- ເລີ່ມຕົ້ນ ກາດຂໍ້ມູນ  -->
 
       <div class="bg-white shadow-lg rounded-lg p-6 text-center service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Grooming" class="w-16 mx-auto mb-4">
+        <img src="img/logo-dog2.png" alt="Grooming" class="w-16 mx-auto mb-4">
         <h3 class="text-xl font-semibold mb-2">Dog Grooming</h3>
       
 
@@ -298,7 +317,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <!-- end Modal -->
 
       <div class="bg-white shadow-lg rounded-lg p-6 text-center service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Grooming" class="w-16 mx-auto mb-4">
+        <img src="img/logo-dog2.png" alt="Grooming" class="w-16 mx-auto mb-4">
         <h3 class="text-xl font-semibold mb-2">Dog Shower </h3>
       
 
@@ -330,7 +349,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
   
         <!-- end Modal -->
                <div class="bg-white shadow-lg rounded-lg p-6 text-center service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Grooming" class="w-16 mx-auto mb-4">
+        <img src="img/logo-dog2.png" alt="Grooming" class="w-16 mx-auto mb-4">
         <h3 class="text-xl font-semibold mb-2">Dog Swimming </h3>
       
 
@@ -347,11 +366,11 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
           <h2 class="text-2xl font-bold mb-4">Dog swimming Details</h2>
           <img src="img/Swimming.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
-            <li>-	We take the groomed dog. </li>
+            <li>-	Taking the dog swimming.  </li>
           </ul>
           <p class="mb-2">Pricing:</p>
           <ul class="mb-4 text-left list-disc list-inside">
-            <ol>100,000 Kip for puppies  and 200,000 Kip for adult dogs </ol>
+            <ol>-	It costs 100.000 Kip per 1 hour.  </ol>
           </ul>
           <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" onclick="document.getElementById('swimmingModal').classList.add('hidden')">Close</button>
         </div>
@@ -359,7 +378,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
   
         <!-- end Modal -->
                <div class="bg-white shadow-lg rounded-lg p-6 text-center service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Grooming" class="w-16 mx-auto mb-4">
+        <img src="img/logo-dog2.png" alt="Grooming" class="w-16 mx-auto mb-4">
         <h3 class="text-xl font-semibold mb-2">Dog takecare</h3>
       
 
@@ -389,7 +408,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
   
         <!-- end Modal -->
                <div class="bg-white shadow-lg rounded-lg p-6 text-center service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Grooming" class="w-16 mx-auto mb-4">
+        <img src="img/logo-dog2.png" alt="Grooming" class="w-16 mx-auto mb-4">
         <h3 class="text-xl font-semibold mb-2">Dog training </h3>
       
 
@@ -418,7 +437,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
   
         <!-- end Modal -->
                <div class="bg-white shadow-lg rounded-lg p-6 text-center service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Grooming" class="w-16 mx-auto mb-4">
+        <img src="img/logo-dog2.png" alt="Grooming" class="w-16 mx-auto mb-4">
         <h3 class="text-xl font-semibold mb-2">Dog transportation </h3>
       
 
@@ -451,16 +470,16 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
 
   <!-- Testimonials -->
   <section class="bg-gray-50 py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">What Our Clients Say</h2>
+    <h2 class="text-3xl font-bold text-center mb-10">Thank you for your trust in our service. </h2>
     <div class="max-w-3xl mx-auto text-center">
-      <p class="text-lg italic">"Paws & Care took amazing care of our pup while we were on vacation. The staff is loving and professional!"</p>
-      <p class="mt-4 font-semibold">– Sarah M.</p>
+      <p class="text-lg italic">""</p>
+      <p class="mt-4 font-semibold"></p>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="py-16 px-6 bg-yellow-100">
-    <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">Contract Us</h2>
     <form class="max-w-xl mx-auto grid gap-4">
       <input type="text" placeholder="Your Name" class="border rounded-lg p-3" required>
       <input type="email" placeholder="Your Email" class="border rounded-lg p-3" required>
@@ -468,10 +487,11 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
       <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send Message</button>
     </form>
   </section>
-<!-- location -->
+
+<!-- contact and location -->
 <section id="location">
  
-    <h2 class="text-3xl font-bold text-center mb-8">Our Location</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">Contract and Location</h2>
 
       <div class="location-details-map" style="display: flex; flex-wrap: wrap; gap: 2rem;">
               <div class="location-details" style="flex: 1 1 250px; min-width: 220px;">
