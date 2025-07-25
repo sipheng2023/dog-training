@@ -10,7 +10,7 @@
 
   <style>
     body {
-      font-family: 'Phetsarath OT', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+      font-family: 'Phetsarath OT', 'Times New Roman', Arial, 'Noto Sans', sans-serif;
     }
   </style>
 
@@ -64,9 +64,9 @@
             en: {
                 services: "Services",
                 contact: "Contact",
-                welcome: "Inthaninh Dog Training Security",
-                subtitle: "The center you can trust with dog experts with over 17 years of experience",
-                explore: "Explore Services",
+                //welcome: "Inthaninh Dog Training Security",
+                //subtitle: "The center you can trust with dog experts with over 17 years of experience",
+                //explore: "Explore Services",
                 ourServices: "Our Services",
                 
                 grooming: "Grooming",
@@ -97,14 +97,23 @@
                 name: "Your Name",
                 email: "Your Email",
                 help: "How can we help you?",
-                send: "Send Message"
+                send: "Send Message",
+
+
+                  title1: "Inthaninh Dog Training Security",
+      desc1: "The center you can trust with dog experts with over 17 years of experience",
+      btn1: "Explore Services"
             },
             la: {
+
+   title1: "ອິນທນິນ ຝຶກສອນໝາ ລັກສາຄວາມປອດໄພ",
+      desc1: "ສູນທີ່ທ່ານໄວ້ໃຈໄດ້ ມີປະສົບການກວ່າ 17 ປີ ໃນການຝຶກຫມາ",
+      btn1: "ບໍລິການທີ່ມີ",
                 services: "ບໍລິການ",
                 contact: "ຕິດຕໍ່",
-                welcome: "Inthaninh Dog Training Security",
-                subtitle: "ສູນເຝິກແອບສັດທີ່ທ່ານໄວ້ໃຈໄດ້ເພາະມີຜູ້ຊ່ຽວຊານດ້ານໝາທີ່ມີປະສົບການມາກວ່າ 17 ປີ",
-                explore: "ການບໍລິການ",
+                //welcome: "Inthaninh Dog Training Security",
+                //subtitle: "ສູນເຝິກແອບສັດທີ່ທ່ານໄວ້ໃຈໄດ້ເພາະມີຜູ້ຊ່ຽວຊານດ້ານໝາທີ່ມີປະສົບການມາກວ່າ 17 ປີ",
+                //explore: "ການບໍລິການ",
                 ourServices: "ບໍລິການຂອງເຮົາ",
 
 
@@ -154,15 +163,21 @@
             }
         };
 
+// Translations for hero section
+
+  // Set default language
+
+
+
         function setLanguage(lang) {
 
-           const font = lang === 'la' ? "'Phetsarath OT', 'Times New Roman', Arial, 'Noto Sans', sans-serif" : "'Times New Roman', Arial, 'Noto Sans', sans-serif";
+           const font = lang === 'la' ? "'Phetsarath OT'" : "'Times New Roman'";
 
             document.querySelector('nav a[href="#services"]').textContent = translations[lang].services;
             document.querySelector('nav a[href="#contact"]').textContent = translations[lang].contact;
-            document.querySelector('h1').textContent = translations[lang].welcome;
-            document.querySelector('section.bg-blue-100 p').textContent = translations[lang].subtitle;
-            document.querySelector('section.bg-blue-100 a').textContent = translations[lang].explore;
+            //document.querySelector('h1').textContent = translations[lang].welcome;
+            //document.querySelector('section.bg-blue-100 p').textContent = translations[lang].subtitle;
+            //document.querySelector('section.bg-blue-100 a').textContent = translations[lang].explore;
             document.querySelector('section#services h2').textContent = translations[lang].ourServices;
 
             const serviceTitles = document.querySelectorAll('section#services h3');
@@ -243,37 +258,52 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
             document.querySelector('section.bg-gray-50 h2').textContent = translations[lang].testimonials;
             document.querySelector('section.bg-gray-50 p.text-lg').textContent = translations[lang].testimonialText;
             document.querySelector('section.bg-gray-50 p.font-semibold').textContent = translations[lang].testimonialAuthor;
-            document.querySelector('section.bg-blue-50 h2').textContent = translations[lang].getInTouch;
+            //document.querySelector('section.bg-blue-50 h2').textContent = translations[lang].getInTouch;
             document.querySelector('form input[type="text"]').placeholder = translations[lang].name;
             document.querySelector('form input[type="email"]').placeholder = translations[lang].email;
             document.querySelector('form textarea').placeholder = translations[lang].help;
             document.querySelector('form button').textContent = translations[lang].send;
 
+
+          
+
+            document.body.style.fontFamily = font;
+            document.documentElement.lang = lang; 
+
+             document.getElementById('hero-title').innerText = translations[lang].title1;
+    document.getElementById('hero-desc').innerText = translations[lang].desc1;
+    document.getElementById('hero-btn').innerText = translations[lang].btn1;
+
         }
 
-        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
-        document.getElementById('lang-la').addEventListener('click', () => setLanguage('la'));
-    </script>
+        // Ensure DOM is loaded before attaching event listeners and setting default language
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+            document.getElementById('lang-la').addEventListener('click', () => setLanguage('la'));
+            setLanguage('en'); // Set default language on page load
+        });
+
+  //document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+  //document.getElementById('lang-la').addEventListener('click', () => setLanguage('la'));
+</script>
+
 
   <!-- Hero Section -->
-  <section class="bg-blue-100 py-16 px-6 text-center">
-    <style>
-      .hero-box {
-        background-color: #FFBF00;
-        border-radius: 1rem;
-        padding: 2rem 1rem;
-        margin: 0 auto 2rem auto;
-        max-width: 900px;
-        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
-        display: inline-block;
-      }
-    </style>
-    <div class="hero-box">
+<!-- Hero Section -->
+<section class="py-16 px-6 text-center" style="background-image: url('img/p3.jpg'); background-size: cover; background-position: center;">
+  <div class="container mx-auto relative z-10">
+    <h1 id="hero-title" class="text-4xl font-bold text-white mb-4">Inthaninh Dog Training Security</h1>
+    <p id="hero-desc" class="text-lg text-white mb-6">The center you can trust with dog experts with over 17 years of experience</p>
+    <a id="hero-btn" href="#services" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
+  </div>
+</section>
+
+ <!--    <div class="hero-box">
       <span class="text-xl font-semibold text-gray-900"></span>
         <h1 class="text-4xl font-bold mb-4">Inthaninh Dog Training Security</h1>
     <p class="text-lg mb-6">The center you can trust with dog experts with over 17 years of experience</p>
     <a href="#services" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
-    </div>
+    </div> -->
   
   </section>
 
@@ -477,7 +507,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- form Contact -->
   <section id="contact" class="py-16 px-6 bg-yellow-100">
     <h2 class="text-3xl font-bold text-center mb-8">Contract Us</h2>
     <form class="max-w-xl mx-auto grid gap-4">
