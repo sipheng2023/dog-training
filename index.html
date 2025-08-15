@@ -10,7 +10,7 @@
 
   <style>
     body {
-      font-family: 'Phetsarath OT', 'Times New Roman', Arial, 'Noto Sans', sans-serif;
+      font-family: 'Phetsarath OT',  Arial, 'Noto Sans', sans-serif;
     }
   </style>
 
@@ -48,7 +48,7 @@
                 <span class="font-bold text-xl">Dog training</span>
             </div>
             <div class="flex items-center space-x-6">
-                <a href="gallery.html" class="text-gray-700 hover:text-blue-500 transition">gallery</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-blue-500 transition">Gallery</a>
                 <a href="#services" class="text-gray-700 hover:text-blue-500 transition">Services</a>
                 <a href="#contact" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
                 <div class="flex items-center space-x-2">
@@ -171,7 +171,7 @@
 
         function setLanguage(lang) {
 
-           const font = lang === 'la' ? "'Phetsarath OT'" : "'Times New Roman'";
+           const font = lang === 'la' ? "'Phetsarath OT'" : "'Arial'";
 
             document.querySelector('nav a[href="#services"]').textContent = translations[lang].services;
             document.querySelector('nav a[href="#contact"]').textContent = translations[lang].contact;
@@ -224,7 +224,7 @@ document.querySelector('#transportationModal ul ol').textContent = lang === 'la'
 // Contract and Location
 
 
-document.querySelector('section#location h2').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່ ແລະ ທີ່ຕັ້ງ" : "Contract and Location";
+document.querySelector('section#location h2').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່ ແລະ ທີ່ຕັ້ງ" : "Contact and Location";
 document.querySelector('section#location h3').textContent = lang === 'la' ? "ຂໍ້ມູນຕິດຕໍ່" : "Contact Details";
 document.querySelector('section#location .location-details p strong').textContent = lang === 'la' ? "ທີ່ຢູ່: " : "Address:";
 document.querySelector('section#location .location-details span').textContent = lang === 'la' ? "ບ້ານ ໜອງໜ້ຽວ ຮ່ອມ 07,ເມືອງ ສີໂຄດຕະບອງ,ນະຄອນຫຼວງວຽງຈັນ" : "Ban Nongniew Hom 07 ,Sikhottabong district , Vientiane Capital, Laos";
@@ -290,10 +290,10 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
 
   <!-- Hero Section -->
 <!-- Hero Section -->
-<section class="py-16 px-6 text-center" style="background-image: url('img/p3.jpg'); background-size: cover; background-position: center;">
+<section class="py-16 px-6 text-center" style="background-image: url('img/bg4.jpg'); background-size: cover; background-position: center;">
   <div class="container mx-auto relative z-10">
-    <h1 id="hero-title" class="text-4xl font-bold text-white mb-4">Inthaninh Dog Training Security</h1>
-    <p id="hero-desc" class="text-lg text-white mb-6">The center you can trust with dog experts with over 17 years of experience</p>
+    <h1 id="hero-title" class="text-4xl font-bold text-black mb-4">Inthaninh Dog Training Security</h1>
+    <p id="hero-desc" class="text-lg text-black mb-6">The center you can trust with dog experts with over 17 years of experience</p>
     <a id="hero-btn" href="#services" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
   </div>
 </section>
@@ -509,7 +509,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
 
   <!-- form Contact -->
   <section id="contact" class="py-16 px-6 bg-yellow-100">
-    <h2 class="text-3xl font-bold text-center mb-8">Contract Us</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
     <form class="max-w-xl mx-auto grid gap-4">
       <input type="text" placeholder="Your Name" class="border rounded-lg p-3" required>
       <input type="email" placeholder="Your Email" class="border rounded-lg p-3" required>
