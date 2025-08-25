@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dog Training</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white text-gray-800">
 
@@ -106,7 +107,7 @@
             },
             la: {
 
-   title1: "ອິນທນິນ ຝຶກສອນໝາ ລັກສາຄວາມປອດໄພ",
+   title1: "ອິນທະນິນ ຝຶກສອນໝາ ຮັກສາຄວາມປອດໄພ",
       desc1: "ສູນທີ່ທ່ານໄວ້ໃຈໄດ້ ມີປະສົບການກວ່າ 17 ປີ ໃນການຝຶກຫມາ",
       btn1: "ບໍລິການທີ່ມີ",
                 services: "ບໍລິການ",
@@ -123,7 +124,7 @@
                 groomingSubtitle: "ລາຍລະອຽດ ຕັດຂົນ ແລະ ຕົກແຕ່ງ",
                 groominglist: "ຕັດຂົນ ແລະ ຕົກແຕ່ງຂົນໝາ ",
                 groomingDesc: "ລາຄາ",
-                groominglist1: ". ລາຄາ ໝານ້ອຍ=100,000 ກີບ ແລະ ໝາໃຫຍ່= 200,000 ກີບ",
+                groominglist1: ". ລາຄາ ເລີ່ມຕົ້ນ 20$",
 
                   shower: "ອາບນ້ຳໝາ",
                   showerlist: "ອາບນ້ຳໝາ",
@@ -131,12 +132,12 @@
                   showerlist3:"ຈະໃຊ້ຄີມນວດຕໍ່",
                   showerlist4:"ສຸດທ້າຍເປົ່າຂົນໃຫ້ແຫ້ງ",
 
-                  showerlist1: "ລາຄາ 100,000 ກີບ ຕໍ່ 1 ຊົ່ວໂມງ",
+                  showerlist1: "ລາຄາ ເລີ່ມຕົ້ນ 20$",
                   // showerDesc2: "ຈະໃຊ້ອາບດ້ວຍສະບູໝາ",
 
                   swimming: "ໝາລອຍນ້ຳ",
                   swimminglist:" ພາໝາລອຍນ້ຳ",
-                   swimminglist1:"ລາຄາ 100,000 ກີບ ຕໍ່ 1 ຊົ່ວໂມງ",
+                   swimminglist1:"ລາຄາ ເລີ່ມຕົ້ນ 20$",
 
                   takecare : "ຮັບຝາກໝາ",
                   takecarelist:"ບໍລິການນີ້ສຳຫຼັບເຈົ້າຂອງບໍ່ຢູ່, ເຮົາຈະເບິ່ງແຍງຖ້າ",
@@ -186,18 +187,18 @@
             const serviceDescs = document.querySelectorAll('section#services p');
             // Grooming Modal
             document.querySelector('#groomingModal ul li').textContent = translations[lang].groominglist || "- We take the groomed dog.";
-            document.querySelector('#groomingModal ul ol').textContent = translations[lang].groominglist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+            document.querySelector('#groomingModal ul ol').textContent = translations[lang].groominglist1 || "Start 20$ ";
 
             // Shower Modal
             document.querySelector('#showerModal ul li').textContent = translations[lang].showerlist || "We will take a dog shower.";
             document.querySelector('#showerModal ul li:nth-child(2)').textContent = translations[lang].showerlist2 || "First, take a dog shampoo.";
             document.querySelector('#showerModal ul li:nth-child(3)').textContent = translations[lang].showerlist3 || "After, take a dog conditioner.";
             document.querySelector('#showerModal ul li:nth-child(4)').textContent = translations[lang].showerlist4 || "Last, take Blow Dog's fur.";
-            document.querySelector('#showerModal ul ol').textContent = translations[lang].showerlist1 || "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+            document.querySelector('#showerModal ul ol').textContent = translations[lang].showerlist1 || "Start 20$ ";
 
             // Swimming Modal
             document.querySelector('#swimmingModal ul li').textContent = translations[lang].swimminglist || "- We take the groomed dog.";
-            document.querySelector('#swimmingModal ul ol').textContent = translations[lang].swimminglist1 || "100,000 Kip per 1 hour";
+            document.querySelector('#swimmingModal ul ol').textContent = translations[lang].swimminglist1 || "Start 20$ ";
 
             // take care 
 
@@ -218,8 +219,8 @@ document.querySelector('#transportationModal ul li').textContent = lang === 'la'
   ? "ພວກເຮົາສາມາດໄປຮັບ ແລະ ສົ່ງໝາໃຫ້ເມື່ອເຈົ້າຂອງບໍ່ສະດວກ"
   : "We can pick up and drop off your dog when the owner is unavailable.";
 document.querySelector('#transportationModal ul ol').textContent = lang === 'la' 
-? "ຄ່າບໍລະການແມ່ນ ...... "
-: "100,000 Kip for puppies and 200,000 Kip for adult dogs";
+? "ລາຄາ ເລີ່ມຕົ້ນ 20$"
+: "Start 20$";
          
 // Contract and Location
 
@@ -290,12 +291,22 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
 
   <!-- Hero Section -->
 <!-- Hero Section -->
-<section class="py-16 px-6 text-center" style="background-image: url('img/bg4.jpg'); background-size: cover; background-position: center;">
-  <div class="container mx-auto relative z-10">
+ <section class="py-16 px-6 text-center flex justify-between items-center space-x-6" 
+           style="background-image: url('img/bg-5.jpg'); background-size: cover; background-position: center;">
+<div class="hero-item">
+      <img src="img/logo-dog.png" alt="dog trainer">
+    </div>
+  <div class="container mx-auto relative z-10 hero-content">
     <h1 id="hero-title" class="text-4xl font-bold text-black mb-4">Inthaninh Dog Training Security</h1>
     <p id="hero-desc" class="text-lg text-black mb-6">The center you can trust with dog experts with over 17 years of experience</p>
+    <p>
+      Dog Training Security Center was established in 2008. The center has complete and accurate documents based on the laws of Laos PDR. The center is the first of its kind in Laos PDR.
+    </p>
     <a id="hero-btn" href="#services" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
   </div>
+  <div class="hero-item">
+      <img src="img/logo-dog2.png" alt="dog warning">
+    </div>
 </section>
 
  <!--    <div class="hero-box">
@@ -332,13 +343,13 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
           <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none" onclick="document.getElementById('groomingModal').classList.add('hidden')">&times;</button>
           <h2 class="text-2xl font-bold mb-4">Dog Grooming Details</h2>
-          <img src="img/Grooming.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
+          <img src="img/Grooming.jpg" alt="Dog Grooming" class="w-40 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>-	We take the groomed dog. </li>
           </ul>
           <p class="mb-2">Pricing:</p>
           <ul class="mb-4 text-left list-disc list-inside">
-            <ol>100,000 Kip for puppies  and 200,000 Kip for adult dogs </ol>
+            <ol>20$ for puppies  and 20$ for adult dogs </ol>
           </ul>
           <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition" onclick="document.getElementById('groomingModal').classList.add('hidden')">Close</button>
         </div>
@@ -362,7 +373,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
           <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none" onclick="document.getElementById('showerModal').classList.add('hidden')">&times;</button>
           <h2 class="text-2xl font-bold mb-4">Dog Shower  Details</h2>
-          <img src="img/Shower.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
+          <img src="img/Shower.jpg" alt="Dog Grooming" class="w-20 mx-auto mb-4" width="300px" height="200px">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>We will take a dog shower. </li>
             <li>First, take a dog shampoo. </li>
@@ -394,7 +405,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
           <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none" onclick="document.getElementById('swimmingModal').classList.add('hidden')">&times;</button>
           <h2 class="text-2xl font-bold mb-4">Dog swimming Details</h2>
-          <img src="img/Swimming.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
+          <img src="img/Swimming.jpg" alt="Dog Grooming" class="w-60 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>-	Taking the dog swimming.  </li>
           </ul>
@@ -423,7 +434,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
           <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none" onclick="document.getElementById('takecareModal').classList.add('hidden')">&times;</button>
           <h2 class="text-2xl font-bold mb-4">Dog takecare Details</h2>
-          <img src="img/taking-care.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
+          <img src="img/taking-care.jpg" alt="Dog Grooming" class="w-40 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>The service is taking care of your dog while the owner is in another county. </li>
             <li>Include showering once a week, feeding twice a day, and playing on the ground. </li>
@@ -453,7 +464,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
           <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none" onclick="document.getElementById('trainingModal').classList.add('hidden')">&times;</button>
           <h2 class="text-2xl font-bold mb-4">Dog training Details</h2>
-          <img src="img/training.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
+          <img src="img/training.jpg" alt="Dog Grooming" class="w-40 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>We will train your dog for the purpose of ownership</li>
           </ul>
@@ -482,7 +493,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
         <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
           <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl font-bold focus:outline-none" onclick="document.getElementById('transportationModal').classList.add('hidden')">&times;</button>
           <h2 class="text-2xl font-bold mb-4">Dog transportation  Details</h2>
-          <img src="img/transportation service.jpg" alt="Dog Grooming" class="w-16 mx-auto mb-4">
+          <img src="img/transportation service.jpg" alt="Dog Grooming" class="w-40 mx-auto mb-4">
           <ul class="mb-4 text-left list-disc list-inside">
             <li>We can pick up and drop off your dog when the owner is unavailable.  </li>
           </ul>
