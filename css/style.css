@@ -5,15 +5,16 @@
   justify-content: space-around;
   align-items: center;
   background: #3b2065;
-  color: #fff;
+  color: #3b2065;
   padding: 50px 20px;
   text-align: center;
 }
 
 .hero-item img {
   width: 120px;
-  border: 2px solid #000;
-  background: #fff;
+/* border: 2px solid #000; */
+  background: url('img/bg-5.jpg') no-repeat center center;
+  background-size: cover;
 }
 
 .hero-content {
