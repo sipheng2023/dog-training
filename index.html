@@ -297,7 +297,7 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
  <section class="py-16 px-6 text-center flex justify-between items-center space-x-6" 
            style="background-image: url('img/bg-5.jpg'); background-size: cover; background-position: center;">
 <div class="hero-item">
-      <img src="img/logo-dog.png" alt="dog trainer">
+      <img src="img/logo-dog.png" alt="dog trainer" width="600">
     </div>
   <div class="container mx-auto relative z-10 hero-content">
     <h1 id="hero-title" class="text-4xl font-bold text-black mb-4">Inthaninh Dog Training Security</h1>
@@ -522,16 +522,30 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
     </div>
   </section>
 
+
+
   <!-- form Contact -->
-  <section id="contact" class="py-16 px-6 bg-yellow-100">
-    <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
-    <form class="max-w-xl mx-auto grid gap-4">
-      <input type="text" placeholder="Your Name" class="border rounded-lg p-3" required>
-      <input type="email" placeholder="Your Email" class="border rounded-lg p-3" required>
-      <textarea placeholder="How can we help you?" rows="4" class="border rounded-lg p-3"></textarea>
-      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">Send Message</button>
-    </form>
-  </section>
+<!-- form Contact -->
+<section id="contact" 
+  class="py-16 px-6" 
+  style="background-color: #8F28BF;">
+  
+  <div class="max-w-2xl mx-auto text-center mb-8">
+    <h2 class="text-3xl font-bold">Contact Us</h2>
+    <p class="mt-2 text-gray-700">We’d love to hear from you! Fill out the form below and we’ll get back to you soon.</p>
+  </div>
+
+  <form class="max-w-xl mx-auto grid gap-4 bg-white shadow-lg rounded-2xl p-8">
+    <input type="text" placeholder="Your Name" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none" required>
+    <input type="email" placeholder="Your Email" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none" required>
+    <textarea placeholder="How can we help you?" rows="4" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
+    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+      Send Message
+    </button>
+  </form>
+</section>
+
+
 
 <!-- contact and location -->
 <section id="location">
