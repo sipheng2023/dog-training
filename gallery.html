@@ -48,7 +48,10 @@
                 contact: "Contact",
                 welcome: "Inthaninh Dog Training Security",
                 subtitle: "Your trusted partner in grooming, boarding, and loving your pets.",
-                explore: "Explore Services"
+                explore: "Explore Services",
+
+                desc1: "The center you can trust with dog experts with over 17 years of experience",
+                desc2: "Dog Training Security Center was established in 2008. The center has complete and accurate documents based on the laws of Laos PDR. The center is the first of its kind in Laos PDR"
               
          
             },
@@ -57,7 +60,10 @@
                 contact: "ຕິດຕໍ່",
                 welcome: "ອິນທະນິນ ຝຶກສອນໝາ ຮັກສາຄວາມປອດໄພ",
                 subtitle: " ພັນທະມິດທີ່ທ່ານໄວ້ວາງໃຈໃນການດູແລ ຕັດຂົນ ແລະ ຮັກສັດລ໊ຽງຂອງທ່ານ",
-                explore: "ເບິ່ງບໍລິການ"
+                explore: "ເບິ່ງບໍລິການ",
+
+                  desc1: "ສູນທີ່ທ່ານໄວ້ໃຈໄດ້ ມີປະສົບການກວ່າ 17 ປີ ໃນການຝຶກຫມາ",
+       desc2: "ສູນເຝິກແອບສັດຖືກສ້າງຕັ້ງຂຶ້ນໃນປີ 2008. ສູນມີເອກະສານຖືກຕ້ອງຄົບຖ້ວນອີງຕາມກົດໝາຍຂອງ ສປປ ລາວ. ແລະ ເປັນສູນເຝິກແອບສັດແຫ່ງແລກທຳອິດຂອງລາວ."
               
             }
         };
@@ -65,8 +71,11 @@
         function setLanguage(lang) {
         
             document.querySelector('h1').textContent = translations[lang].welcome;
-            document.querySelector('section.bg-yellow-100 p').textContent = translations[lang].subtitle;
-            document.querySelector('section.bg-blue-100 a').textContent = translations[lang].explore;
+            //document.querySelector('section.bg-yellow-100 p').textContent = translations[lang].subtitle;
+            //document.querySelector('section.bg-blue-100 a').textContent = translations[lang].explore;
+
+            document.getElementById('hero-desc').innerText = translations[lang].desc1;
+            document.getElementById('hero-desc2').innerText = translations[lang].desc2;
  
    
         }
@@ -77,11 +86,16 @@
     </script>
 
   <!-- Hero Section -->
-  <section class="bg-yellow-100 py-16 px-6 text-center">
+  <section    class="py-16 px-6 text-center" 
+  style="background-color: #8F28BF;">>
     <h1 class="text-4xl font-bold mb-4">Inthaninh Dog Training Security</h1>
-    <p class="text-lg mb-6">The center you can trust with dog experts with over 17 years of experience</p>
-    <a href="index.html" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
+    <p id="hero-desc" class="text-lg mb-6">The center you can trust with dog experts with over 17 years of experience</p>
+      <p id="hero-desc2" class="text-lg text-black mb-6">
+      Dog Training Security Center was established in 2008. The center has complete and accurate documents based on the laws of Laos PDR. The center is the first of its kind in Laos PDR.
+    </p>
+    <a href="#" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Explore Services</a>
   </section>
+
 <!--section activity-->
 <section class="max-w-5xl mx-auto my-12 bg-white rounded-lg shadow-md flex flex-col md:flex-row overflow-hidden">
   <!-- Left: Picture -->
