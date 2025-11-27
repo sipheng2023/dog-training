@@ -535,10 +535,10 @@ document.querySelector('section#location .location-details p:nth-of-type(3) stro
     <p class="mt-2 text-gray-700">We’d love to hear from you! Fill out the form below and we’ll get back to you soon.</p>
   </div>
 
-  <form class="max-w-xl mx-auto grid gap-4 bg-white shadow-lg rounded-2xl p-8">
-    <input type="text" placeholder="Your Name" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none" required>
-    <input type="email" placeholder="Your Email" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none" required>
-    <textarea placeholder="How can we help you?" rows="4" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
+  <form class="max-w-xl mx-auto grid gap-4 bg-white shadow-lg rounded-2xl p-8" action="https://script.google.com/macros/s/AKfycbxAP-dBASnKZMSLBPovlYDkC8_lTICJtUlFK00FkGuhOnRdouLbSLOcBoEeBx2wC61jng/exec" method="post">
+    <input type="text" id="Name" name="Name" placeholder="Your Name" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none" required>
+    <input type="email" id="Email" name="Email" placeholder="Your Email" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none" required>
+    <textarea id="Message" name="Message" placeholder="How can we help you?" rows="4" class="border rounded-lg p-3 focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
     <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
       Send Message
     </button>
